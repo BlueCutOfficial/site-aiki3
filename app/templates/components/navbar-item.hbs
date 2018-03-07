@@ -1,0 +1,26 @@
+{{#bs-navbar class="fixed-top" as |navbar|}}
+  {{navbar.toggle class="navbar-toggler-right"}}
+  <a class="navbar-brand" href="/">
+    <img src="{{rootURL}}assets/logo-text.png" class="d-inline-block align-top" alt=""/>
+  </a>
+  {{#navbar.content}}
+    {{#navbar.nav as |nav|}}
+      {{#nav.item}}
+        {{#nav.link-to "aikido"}}{{navbar-arrow-item title="L'aïkido"}}{{/nav.link-to}}
+      {{/nav.item}}
+      {{#nav.item}}
+        {{#nav.link-to "club"}}{{navbar-arrow-item title="Le club"}}{{/nav.link-to}}
+      {{/nav.item}}
+      {{#nav.item}}
+        {{#nav.link-to "practice"}}{{navbar-arrow-item title="Venir Pratiquer"}}{{/nav.link-to}}
+      {{/nav.item}}
+      {{#nav.item}}
+        {{#nav.link-to "links"}}{{navbar-arrow-item title="Liens"}}{{/nav.link-to}}
+      {{/nav.item}}
+      {{#nav.item}}
+        {{#nav.link-to "stages"}}{{navbar-arrow-item title="Stages"}}{{/nav.link-to}}
+      {{/nav.item}}
+    {{/navbar.nav}}
+  {{/navbar.content}}
+{{/bs-navbar}}
+<div class="navbar-underline"></div>

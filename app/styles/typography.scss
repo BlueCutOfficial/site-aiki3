@@ -1,0 +1,71 @@
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1, h2, h3 {
+  left: -2px;
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+  margin: 0px;
+}
+
+h6 {
+  font-size: modular-scale(1);
+}
+
+h5 {
+  font-size: modular-scale(2);
+}
+
+h4 {
+  font-size: modular-scale(3);
+  margin-top: $spacing-sm;
+  margin-bottom: $spacing-sm;
+}
+
+h3 {
+  font-size: modular-scale(4);
+  margin-top: $spacing-sm;
+  margin-bottom: $spacing-sm;
+}
+
+h2 {
+  font-size: modular-scale(5);
+  margin-top: $spacing-sm;
+  margin-bottom: $spacing-sm;
+}
+
+h1 {
+  font-size: $heading-font-size;
+  color: $heading-color;
+  margin-bottom:  $spacing-md;
+  margin-top: $spacing-md;
+}
+
+p {
+  margin: 0 0 $spacing-sm;
+}
+
+a {
+  color: $action-color;
+  transition: color $base-duration $base-timing;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $spacing-md 0;
+}

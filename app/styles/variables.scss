@@ -1,0 +1,52 @@
+// Colors
+$black: #000000;
+$red: #cb3a3a;
+$white: #fcfcfc;
+$white-gray: #edecec;
+$light-gray: #d3d3d3;
+$base-gray: #333;
+$dark-gray: #121212;
+
+// Font Colors
+$base-font-color: $white-gray;
+$action-color: $red;
+$heading-color: $red;
+
+// Background Colors
+$base-background-color: $base-gray;
+$dark-background-color: $dark-gray;
+$secondary-background-color: tint($white-gray, 75%);
+
+// Spacings
+$spacing-xs: 2px;
+$spacing-sm: 5px;
+$spacing-md: 10px;
+$spacing-lg: 20px;
+$spacing-xl: 40px;
+
+// Fonts
+$sans-serif: 'Roboto', sans-serif;
+$serif: 'Amethysta', serif;
+
+// Typo
+$base-font-family: $sans-serif;
+$base-font-size: 1em;
+$base-line-height: 1.5;
+$heading-font-family: $serif;
+$heading-font-size: 2em;
+$heading-line-height: 1.2;
+
+// Border
+$base-border: 1px solid $white-gray;
+
+// Navbar
+$navbar-background-color: $light-gray;
+$navbar-thumb-color-selected: $base-background-color;
+$navbar-shadow-color: $black;
+$navbar-link-color: $dark-gray;
+$navbar-link-active-color: $white;
+$navbar-height: 50px;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
