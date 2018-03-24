@@ -4,15 +4,19 @@ body {
   background-repeat: repeat-y;
   background-position: right top;
 
-  .container-fluid {
-    margin-top: $navbar-height;
-    padding: $spacing-lg;
-  }
+  .page-content {
+    margin-left: $side-width;
 
-  .aikido {
-    text-align: justify;
-    .row {
-      padding-bottom: $spacing-md;
+    .container-fluid {
+      margin-top: $navbar-height;
+      padding: $spacing-lg;
+    }
+
+    .aikido {
+      text-align: justify;
+      .row {
+        padding-bottom: $spacing-md;
+      }
     }
   }
 }
