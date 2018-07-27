@@ -9,13 +9,53 @@ body {
 
     .container-fluid {
       margin-top: $navbar-height;
-      padding: $spacing-lg;
     }
 
     .aikido {
+      padding-top: $spacing-lg;
+      padding-left: $spacing-lg;
       text-align: justify;
       .row {
         padding-bottom: $spacing-md;
+      }
+    }
+
+    .club {
+      padding-top: $spacing-lg;
+      padding-left: $spacing-lg;
+
+      .gallery {
+        img {
+          width: 40%;
+        }
+      }
+    }
+
+    .links {
+      .sites {
+        text-align: center;
+        background-color: rgba($dark-background-color, 0.8);
+        padding-top: $spacing-xl;
+        padding-bottom:$spacing-xl;
+
+        .link {
+          display: inline-block;
+          margin-bottom: $spacing-lg;
+
+          &:not(:last-child) {
+            margin-right: $spacing-lg;
+          }
+
+          img {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+
+      .docs {
+        padding-top: $spacing-lg;
+        padding-left: $spacing-lg;
       }
     }
   }
