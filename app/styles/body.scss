@@ -31,6 +31,17 @@ body {
       }
     }
 
+    .practice {
+      padding-top: $spacing-lg;
+      padding-left: $spacing-lg;
+
+      .price {
+        display: inline-block;
+        margin-right: $spacing-xl;
+        vertical-align: top;
+      }
+    }
+
     .links {
       .sites {
         text-align: center;

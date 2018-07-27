@@ -6,10 +6,8 @@ body {
 }
 
 h1, h2, h3 {
-  left: -2px;
   font-family: $heading-font-family;
   line-height: $heading-line-height;
-  margin: 0px;
 }
 
 h6 {
@@ -18,6 +16,7 @@ h6 {
 
 h5 {
   font-size: modular-scale(2);
+  margin-top: $spacing-md;
 }
 
 h4 {
@@ -42,7 +41,11 @@ h1 {
   font-size: $heading-font-size;
   color: $heading-color;
   margin-bottom:  $spacing-md;
-  margin-top: $spacing-md;
+  margin-top: $spacing-xl;
+
+  .first {
+    margin-top: $spacing-lg;
+  }
 }
 
 p {
