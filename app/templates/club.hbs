@@ -30,12 +30,17 @@
   </div>
 
   <h1>Gallerie</h1>
-  <div class="gallery">
-    {{#each gallery as |image|}}
-      <a href="{{rootURL}}/assets/{{image.url}}" data-size="{{image.width}}x{{image.height}}" data-title="{{image.title}}">
-        <img class="" src="{{rootURL}}/assets/{{image.url}}" alt="{{image.title}}" title="{{image.title}}" />
-      </a>
-    {{/each}}
+  <div class="gallery row">
+    {{#photo-swipe class='col-12' items=gallery history=false as |photoswipe|}}
+      {{#each gallery as |item index|}}
+        <img
+          src={{item.src}}
+          class="gallery__image{{if (eq index 0) ' gallery__image--large'}}"
+          alt={{item.title}}
+          title={{item.title}}
+          {{action photoswipe.actions.open (hash index=index)}} />
+      {{/each}}
+    {{/photo-swipe}}
   </div>
 
 </div>

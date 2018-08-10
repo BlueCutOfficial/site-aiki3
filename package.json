@@ -30,6 +30,7 @@
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-qunit": "^4.3.2",
+    "ember-cli-roboto-fontface": "^2.0.1",
     "ember-cli-sass": "^7.1.7",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
@@ -39,10 +40,13 @@
     "ember-google-maps": "^2.0.4",
     "ember-load-initializers": "^1.1.0",
     "ember-maybe-import-regenerator": "^0.1.6",
+    "ember-photoswipe": "^0.4.1",
     "ember-resolver": "^4.0.0",
     "ember-source": "~3.3.0",
+    "ember-truth-helpers": "^2.0.0",
     "eslint-plugin-ember": "^5.0.0",
     "loader.js": "^4.2.3",
+    "photoswipe": "^4.1.2",
     "qunit-dom": "^0.6.2"
   },
   "engines": {

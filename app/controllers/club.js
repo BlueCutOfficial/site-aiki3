@@ -1,33 +1,40 @@
 import Controller from '@ember/controller';
 import { A } from '@ember/array';
+import env from '../config/environment';
+
+const { rootURL } = env;
 
 export default Controller.extend({
   gallery: A([
     {
-      title: 'Michel à droite, professeur de l\'Aiki3',
-      url: 'gallery_aiki1.jpg',
-      width: 479,
-      height: 328
-    }, {
+      title: "Michel à droite, professeur de l'Aiki3",
+      src: `${rootURL}assets/gallery_aiki1.jpg`,
+      w: 479,
+      h: 328
+    },
+    {
       title: 'Kokyu Nage (projection)',
-      url: 'gallery_aiki2.jpg',
-      width: 400,
-      height: 330
-    }, {
+      src: `${rootURL}assets/gallery_aiki2.jpg`,
+      w: 400,
+      h: 330
+    },
+    {
       title: 'Shihoo Nage (projection)',
-      url: 'gallery_aiki3.jpg',
-      width: 400,
-      height: 330
-    }, {
+      src: `${rootURL}assets/gallery_aiki3.jpg`,
+      w: 400,
+      h: 330
+    },
+    {
       title: 'Hiji Kime Osae',
-      url: 'gallery_aiki4.jpg',
-      width: 400,
-      height: 327
-    }, {
+      src: `${rootURL}assets/gallery_aiki4.jpg`,
+      w: 400,
+      h: 327
+    },
+    {
       title: 'Nikyo',
-      url: 'gallery_aiki5.jpg',
-      width: 400,
-      height: 330
+      src: `${rootURL}assets/gallery_aiki5.jpg`,
+      w: 400,
+      h: 330
     }
   ])
 });

@@ -1,0 +1,13 @@
+.gallery {
+  &__image {
+    display: block;
+    float: left;
+    max-height: $gallery-image-height;
+    margin-right: $spacing-md;
+    margin-bottom: $spacing-md;
+
+    &--large {
+      max-height: $gallery-image-big-height;
+    }
+  }
+}
