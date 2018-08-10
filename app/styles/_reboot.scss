@@ -1,6 +1,7 @@
 .container-fluid {
   margin: 0;
   padding: 0;
+  width: calc(100% - #{$right-side-width});
 }
 
 .row {

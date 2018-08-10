@@ -1,4 +1,4 @@
-<div class="links container-fluid">
+<div class="links">
   <div class="sites">
     {{#each linkItems as |linkItem|}}
       <div class="link">
@@ -11,15 +11,19 @@
     {{/each}}
   </div>
   {{#if docs}}
-    <div class="docs">
+    <div class="docs container-fluid">
       <h1>Documents à télécharger</h1>
-      <ul>
-        {{#each docs as |doc|}}
-        <li>
-          {{ doc.title }} : <a href="{{ doc.url }}" target="_blank">Télécharger</a>
-        </li>
-        {{/each}}
-      </ul>
+      <div class="row">
+        <div class="col-12">
+          <ul>
+            {{#each docs as |doc|}}
+              <li>
+                {{ doc.title }} : <a href="{{ doc.url }}" target="_blank">Télécharger</a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
     </div>
   {{/if}}
 </div>

@@ -5,7 +5,9 @@ body {
   line-height: $base-line-height;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: $heading-font-family;
   line-height: $heading-line-height;
 }
@@ -40,7 +42,7 @@ h2 {
 h1 {
   font-size: $heading-font-size;
   color: $heading-color;
-  margin-bottom:  $spacing-md;
+  margin-bottom: $spacing-md;
   margin-top: $spacing-xl;
 
   .first {

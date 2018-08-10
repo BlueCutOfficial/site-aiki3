@@ -20,6 +20,18 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    'ember-google-maps': {
+      key: 'AIzaSyDam2nPRQoiGNPRAl1bLWpGTjYacbK2mnM',
+      language: 'fr',
+      region: 'FR',
+      protocol: 'https',
+      version: '3.33',
+      libraries: ['geometry', 'places']
+      // client: undefined,
+      // channel: undefined,
+      // baseUrl: '//maps.googleapis.com/maps/api/js'
     }
   };
 
