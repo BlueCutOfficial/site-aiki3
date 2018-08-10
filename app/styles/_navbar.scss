@@ -44,10 +44,10 @@
 
   .nav-item {
     text-align: center;
-    padding-left: $spacing-xl;
-    padding-right: $spacing-xl;
 
     a.nav-link {
+      padding-left: $spacing-xl;
+      padding-right: $spacing-xl;
       font-weight: bold;
       color: $navbar-link-color;
       text-decoration: none;
