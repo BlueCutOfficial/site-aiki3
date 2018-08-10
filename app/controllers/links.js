@@ -36,7 +36,7 @@ export default Controller.extend({
   docs: A([
     {
       title: "Tryptique de présentation de l'Aiki3 (pdf)",
-      url: `${rootURL}assets/triptyque 2010-2011.pdf`
+      url: `${rootURL}assets/aiki3-triptyque-2010-2011.pdf`
     },
     {
       title: 'Le planning des stages 2018-2019 de Patrick Bénézi (pdf)',
