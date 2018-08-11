@@ -1,7 +1,8 @@
 # site-aiki3
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+[![CircleCI](https://circleci.com/gh/BelettesSauvages/site-aiki3.svg?style=shield)](https://circleci.com/gh/BelettesSauvages/site-aiki3)
+
+Site web de l'[aiki3](http://aiki3.com) (club d'Aikido à Troyes).
 
 ## Prerequisites
 
