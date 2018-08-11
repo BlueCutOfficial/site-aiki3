@@ -32,6 +32,12 @@ module.exports = function(environment) {
       // client: undefined,
       // channel: undefined,
       // baseUrl: '//maps.googleapis.com/maps/api/js'
+    },
+
+    FB: {
+      appId: '550450455372544',
+      version: 'v3.1',
+      xfbml: true
     }
   };
 
