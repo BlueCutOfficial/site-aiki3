@@ -1,28 +1,91 @@
+defaults: &defaults
+  docker:
+    - image: circleci/node:10-browsers
+      environment:
+        JOBS: 1
+  working_directory: ~/site-aiki3
+
 version: 2
 jobs:
-  build:
-    working_directory: ~/site-aiki3
-    docker:
-      - image: circleci/node:10-browsers
+  checkout_code:
+    <<: *defaults
     steps:
       - checkout
-      - run: sudo apt-get update
-      - run: sudo apt-get install ncftp
-      - run: npm config set spin false
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  install_dependencies:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: .
       - restore_cache:
           keys:
-            - aiki3-node10-v1-{{ checksum "package-lock.json" }}
-            - aiki3-node10-v1-
-      - run: npm install
+            - site-aiki3-node10-v1-{{ checksum "package-lock.json" }}
+      - run: npm config set spin false
+      - run:
+          name: NPM Install
+          command: npm install
       - save_cache:
-          key: aiki3-node10-v1-{{ checksum "package-lock.json" }}
+          key: site-aiki3-node10-v1-{{ checksum "package-lock.json" }}
           paths:
             - ~/site-aiki3/node_modules
-      - run: npm run lint:js
-      - run: npm test
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  lint:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Lint JavaScript
+          command: npm run lint:js
+
+  test:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Run Tests
+          command: npm run test
+
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: .
+      - run: sudo apt-get install ncftp
+      - run:
+          name: Build for production
+          command: ./node_modules/.bin/ember build --environment=production
+      - run:
+          name: Deploy on production
+          command: ncftpput -R -v -u $FTP_USER -p $FTP_PASSWORD $FTP_HOST . dist/*
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - checkout_code
+      - install_dependencies:
+          requires:
+            - checkout_code
+      - lint:
+          requires:
+            - install_dependencies
+      - test:
+          requires:
+            - install_dependencies
       - deploy:
-          command: |
-            if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
-              ./node_modules/.bin/ember build --environment=production
-              ncftpput -R -v -u $FTP_USER -p $FTP_PASSWORD $FTP_HOST . dist/*
-            fi
+          requires:
+            - lint
+            - test
+          filters:
+            branches:
+              only: master
