@@ -3500,6 +3500,14 @@ ember-bootstrap@^1.2.1:
     rsvp "^4.0.1"
     silent-error "^1.0.1"
 
+ember-circleci@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/ember-circleci/-/ember-circleci-1.4.1.tgz#3d470e803daacd792bc63f87c72ad865263d53bf"
+  integrity sha512-wnqoTa5ZXXOZGfzLb/1e8p0dYoNtiwxWnd3i9dfvZ9XjlZnQLVW2oowsOVp+3RQUBTL7lLJ76fhRaP/xQKicWg==
+  dependencies:
+    ember-cli-babel "^7.7.3"
+    ember-cli-string-utils "^1.1.0"
+
 ember-cli-app-version@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/ember-cli-app-version/-/ember-cli-app-version-3.2.0.tgz#7b9ad0e1b63ae0518648356ee24c703e922bc26e"
