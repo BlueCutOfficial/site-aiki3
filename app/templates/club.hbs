@@ -4,8 +4,10 @@
   <div class="row">
     <div class="col-12">
       <p>L'Aiki3 est un club d'aïkido à Troyes. Il existe depuis 1993.</p>
-      <p>Le groupe se compose d'une vingtaine de licenciés de niveaux très variés.
-      Certains membres sont encore débutants, d'autres ont derrière eux de nombreuses années de pratique.</p>
+      <p>
+        Le groupe se compose d'une vingtaine de licenciés de niveaux très variés.
+        Certains membres sont encore débutants, d'autres ont derrière eux de nombreuses années de pratique.
+      </p>
       <p>Les entrainements ont lieu deux fois par semaine dans les salles de combat mises à disposition du groupe.</p>
     </div>
   </div>
@@ -13,7 +15,7 @@
   <h1>Enseignement</h1>
   <div class="row">
     <div class="col-5 col-md-4 col-lg-3">
-      <img src="{{rootURL}}assets/club_mcz.jpg" alt="Michel Czerniak" title="Michel Czerniak" />
+      <img src="{{rootURL}}assets/club_mcz.jpg" alt="Michel Czerniak" title="Michel Czerniak">
     </div>
     <div class="col-7 col-md-8 col-lg-9">
       <p>
@@ -22,7 +24,9 @@
       </p>
       <p>
         La pratique à l'Aiki3 est essentiellement influencée par l'enseignement de
-        <strong><a href="http://www.aikido-benezi.com" target="_blank">Patrick Bénézi</a></strong>,
+        <strong>
+          <a href="http://www.aikido-benezi.com" target="_blank" rel="noopener">Patrick Bénézi</a>
+        </strong>,
         ceinture noire, Shihan 7e Dan, qui enseigne à Paris et dirige des stages au Cercle Tissier
         à Vincennes et dans toute la France.
       </p>
@@ -31,14 +35,16 @@
 
   <h1>Galerie</h1>
   <div class="gallery row">
-    {{#photo-swipe class='col-12' items=gallery history=false as |photoswipe|}}
+    {{#photo-swipe class="col-12" items=gallery history=false as |photoswipe|}}
       {{#each gallery as |item index|}}
         <img
           src={{item.src}}
-          class="gallery__image{{if (eq index 0) ' gallery__image--large'}}"
+          class="gallery__image{{if (eq index 0) " gallery__image--large"}}"
           alt={{item.title}}
           title={{item.title}}
-          {{action photoswipe.actions.open (hash index=index)}} />
+          {{! template-lint-disable no-invalid-interactive }}
+          {{action photoswipe.actions.open (hash index=index)}}
+        >
       {{/each}}
     {{/photo-swipe}}
   </div>

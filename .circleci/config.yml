@@ -8,18 +8,18 @@ jobs:
       - checkout
       - run: sudo apt-get update
       - run: sudo apt-get install ncftp
-      - run: npm config set spin false
       - restore_cache:
           keys:
-            - aiki3-node10-v1-{{ checksum "package-lock.json" }}
+            - aiki3-node10-v1-{{ checksum "yarn.lock" }}
             - aiki3-node10-v1-
-      - run: npm install
+      - run: yarn install
       - save_cache:
-          key: aiki3-node10-v1-{{ checksum "package-lock.json" }}
+          key: aiki3-node10-v1-{{ checksum "yarn.lock" }}
           paths:
             - ~/site-aiki3/node_modules
-      - run: npm run lint:js
-      - run: npm test
+      - run: yarn lint:js
+      - run: yarn lint:hbs
+      - run: yarn test
       - deploy:
           command: |
             if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
