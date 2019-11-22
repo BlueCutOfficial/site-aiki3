@@ -63,6 +63,7 @@ jobs:
     steps:
       - attach_workspace:
           at: .
+      - run: sudo apt-get install ncftp
       - run:
           name: Build
           command: yarn ember build --environment=production
