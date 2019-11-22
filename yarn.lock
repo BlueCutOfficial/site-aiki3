@@ -8178,6 +8178,11 @@ simple-html-tokenizer@^0.5.8:
   resolved "https://registry.yarnpkg.com/simple-html-tokenizer/-/simple-html-tokenizer-0.5.8.tgz#3417382f75954ee34515cc4fd32d9918e693f173"
   integrity sha512-0Sq4FvLlQEQODVA6PH2MIrc7tzYO0KT2HzzwvaVLYClWgIsuvaNUOrhrAvTi1pZHrcq7GDB4WiI3ukjqBMxcGQ==
 
+sitemap-autogenerator@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/sitemap-autogenerator/-/sitemap-autogenerator-1.2.2.tgz#d05a0c848f0aa1b9ee6c82c97e80ab607b067940"
+  integrity sha512-YqWckeNmqnvRrf7X60coT6ErAzNi1WcbCz/HmNGzTJ5OvkW1CulV04DJQkIolAtt+UUGKUaepQZ3UdJiYstSAw==
+
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"

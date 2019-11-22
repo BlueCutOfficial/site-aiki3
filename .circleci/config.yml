@@ -66,7 +66,7 @@ jobs:
       - run: sudo apt-get install ncftp
       - run:
           name: Build
-          command: yarn ember build --environment=production
+          command: yarn build
       - run:
           name: Deploy
           command: ncftpput -R -v -u $FTP_USER -p $FTP_PASSWORD $FTP_HOST . dist/*
