@@ -1,6 +1,6 @@
 body {
   background-color: $base-background-color;
-  background-image: url('../assets/background.png');
+  background-image: url("../assets/background.png");
   background-repeat: repeat-y;
   background-position: right top;
 
@@ -8,16 +8,10 @@ body {
     margin-top: $navbar-height;
 
     .main-content {
-      margin-left: $left-side-width;
-
-      .index,
-      .aikido,
-      .club,
-      .practice,
-      .links .docs,
-      .stages {
-        padding-top: $spacing-lg;
-        padding-left: $spacing-lg;
+      padding-top: $spacing-md;
+      @media (min-width: $side-media-min-height) {
+        margin-left: $left-side-width;
+        width: calc(100% - #{$right-side-width} - #{$left-side-width});
       }
 
       .aikido {

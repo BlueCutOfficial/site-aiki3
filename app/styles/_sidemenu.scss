@@ -1,4 +1,9 @@
 .side {
+  display: none;
+  @media (min-width: $side-media-min-height) {
+    display: block !important;
+  }
+
   background-color: $dark-background-color;
   padding-top: $spacing-lg;
   padding-left: $spacing-lg;
